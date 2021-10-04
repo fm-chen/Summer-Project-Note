@@ -1,6 +1,9 @@
 # Social Media Stance Detection under Fiancial Content
 ## Motivation
-TBD
+Since the difficulty of true labeling, stance detection, as one of the crucial sub-task of fake content detecion, has been receving more and more attention.
+
+![GitHub Logo](https://dl.dropbox.com/s/xbguwgwyrv74cka/stat.jpg)
+<p>Publications per year on stance detection as searched on Web of Science. The following keywords were used for search: “stance detection”, “stance prediction” and “stance classification"</p>
 
 ## Related Work and Publications
 TBD
