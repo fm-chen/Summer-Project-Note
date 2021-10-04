@@ -1,6 +1,6 @@
 # Social Media Stance Detection under Fiancial Content
 ## Motivation
-Since the difficulty of true labeling, stance detection, as one of the crucial sub-task of fake content detecion, has been receving more and more attention.
+Since the difficulty of true labeling, <b>stance detection</b>, as one of the crucial sub-task of fake content detecion, has been receving more and more attention.
 
 ![GitHub Logo](https://dl.dropbox.com/s/xbguwgwyrv74cka/stat.jpg)
 <p>Publications per year on stance detection as searched on Web of Science. The following keywords were used for search: “stance detection”, “stance prediction” and “stance classification"</p>
@@ -10,8 +10,8 @@ TBD
 
 
 ## Data Set
-<b>Repository for the ACL 2020 paper:
-Will-They-Won't-They: A Very Large Dataset for Stance Detection on Twitter </b><br>
+✅ Repository for the ACL 2020 paper:
+Will-They-Won't-They: A Very Large Dataset for Stance Detection on Twitter <br>
 
 Will-They-Won't-They (WT-WT) is a large dataset of English tweets targeted at stance detection for the rumor verification task. The dataset is constructed based on tweets that discuss five recent merger and acquisition (M&A) operations of US companies, mainly from the healthcare sector.
 
