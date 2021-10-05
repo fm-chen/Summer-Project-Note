@@ -77,10 +77,10 @@ test.to_csv('data/test_data.csv', index = False)
 <br>
 
 ### statistics:
-![GitHub Logo](https://dl.dropbox.com/s/wfl9ts0xkc7olwu/Capture1.PNG){:height="30%" width="30%"}
+<img src="https://dl.dropbox.com/s/wfl9ts0xkc7olwu/Capture1.PNG" width="80%" height="80%">
 
 ### paper results
-![GitHub Logo](https://dl.dropbox.com/s/8w1s6vn3mifgvy7/Capture2.PNG){:height="30%" width="30%"}
+<img src="https://dl.dropbox.com/s/8w1s6vn3mifgvy7/Capture2.PNG" width="80%" height="80%">
 
 ### more to be done：
 
