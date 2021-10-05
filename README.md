@@ -100,7 +100,7 @@ The classification task is done in a 3-stage process:
 
 Method Offical Link: https://humboldt-wi.github.io/blog/research/information_systems_1819/group4_ulmfit/
 
-My Colab workpage: https://drive.google.com/file/d/1_UtMB7Nyv8zxYO9zPwxyQ__8Ok0iPDpD/view?usp=sharing
+My Colab workpage (with comments): https://drive.google.com/file/d/1_UtMB7Nyv8zxYO9zPwxyQ__8Ok0iPDpD/view?usp=sharing
 
 
 ### SiamNet (❌ haven't tried yet)
