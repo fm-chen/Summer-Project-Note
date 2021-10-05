@@ -28,6 +28,19 @@ Will-They-Won't-They (WT-WT) is a large dataset of English tweets targeted at st
 All the annotations are carried out by domain experts; therefore, the dataset constitutes a high-quality and reliable benchmark for future research in stance detection.
 
 Paper Link: https://arxiv.org/abs/2005.00388 <br>
+
+### Test Train Split:
+
+'''
+from sklearn.model_selection import train_test_split
+import pandas as pd
+
+data_org = pd.read_csv('data/full_data.csv')
+train, test = train_test_split(data_org, test_size=0.3, stratify=data_org['merger'])
+train.to_csv('data/train_data.csv', index = False)
+test.to_csv('data/test_data.csv', index = False)
+'''
+
 ### Stances:
 
 1. Support: the tweet is stating that the two companies will merge.
