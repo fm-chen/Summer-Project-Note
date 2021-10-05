@@ -29,7 +29,7 @@ All the annotations are carried out by domain experts; therefore, the dataset co
 
 Paper Link: https://arxiv.org/abs/2005.00388 <br>
 
-### Test Train Split:
+### Test Train Split (with stratifycation):
 
 ```
 from sklearn.model_selection import train_test_split
@@ -107,7 +107,13 @@ The classification task is done in a 3-stage process:
 
 1. <b>General-domain LM pretraining:</b> ULMFit has a pretrained model generated using an AWD-LSTM (as per Merity et al., 2017)) to develop a language model called Wikitext-103 and was trained of 28,595 preprocessed Wikipedia articles, totalling to 103 million words.
 2. <b>Target task LM fine-tuning:</b> Since the data for the target will likely come from a different distribution, ULMFit allows us to use the pre-trained language model anf fine-tune it (using the above techniques) to adapt to the idiosyncrasies of the target data.
-3. <b>Target task classifier fine-tuning:</b> Once we save the updated weights from the language model fine-tuning step, we can fine-tune the classifier with gradual unfreezing and the other techniques described above to perform task-specific class prediction.
+
+        -use full training set for fine-tuning
+
+4. <b>Target task classifier fine-tuning:</b> Once we save the updated weights from the language model fine-tuning step, we can fine-tune the classifier with gradual unfreezing and the other techniques described above to perform task-specific class prediction.
+
+        -use specific topic sub-set for training classifier
+        -test using the seperate test set
 
 <b>Note:</b> for this stance classification task, only steps 2 and 3 are performed, and utilize the pretrained language model (step 1) from the fastai database.
 
