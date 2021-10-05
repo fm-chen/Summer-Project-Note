@@ -121,6 +121,8 @@ Method Offical Link: https://humboldt-wi.github.io/blog/research/information_sys
 
 My Colab workpage (with comments): https://drive.google.com/file/d/1_UtMB7Nyv8zxYO9zPwxyQ__8Ok0iPDpD/view?usp=sharing
 
+#### Result Report (Accuracy):
+
 
 ### SiamNet (❌ haven't tried yet)
 
