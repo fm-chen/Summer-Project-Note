@@ -14,9 +14,10 @@ Since the difficulty of true labeling, <b>stance detection</b>, as one of the cr
 6. Stance Detection with BERT Embeddings for Credibility Analysis of Information on Social Media (2021): https://arxiv.org/abs/2105.10272
 7. Zero-Shot Stance Detection: ADataset and Model using Generalized Topic Representations (2020): https://arxiv.org/abs/2010.03640
 8. Recognising Agreement and Disagreement between Stances with Reason Comparing Networks (2019): https://aclanthology.org/P19-1460/ 
-9. Universal Language Model Fine-tuning for Text Classification (2018): https://arxiv.org/abs/1801.06146
-10. Stance Classification of Context-Dependent Claims (2017): https://aclanthology.org/E17-1024/
-11. MITREatSemEval-2016 Task 6: Transfer Learning for Stance Detection (2016): https://arxiv.org/abs/1606.03784
+9. Can Siamese Networks help in stance detection? (2019): <a href="/src/SiamNet.pdf" class="image fit">Link to pdf (acquired from UDEL library and cannot be distributed)</a>
+10. Universal Language Model Fine-tuning for Text Classification (2018): https://arxiv.org/abs/1801.06146
+11. Stance Classification of Context-Dependent Claims (2017): https://aclanthology.org/E17-1024/
+12. MITREatSemEval-2016 Task 6: Transfer Learning for Stance Detection (2016): https://arxiv.org/abs/1606.03784
 
 ## Data Set
 ✅ Repository for the ACL 2020 paper:
