@@ -123,6 +123,13 @@ My Colab workpage (with comments): https://drive.google.com/file/d/1_UtMB7Nyv8zx
 
 #### Result Report (Accuracy):
 
+| Operation | Overall Accuracy       | F-1   (comment, refute, support, unrelated)      
+| ---       | ---         | ---               
+| CVS_AET   | 0.7943791224548322  | [0.800722, 0.627451, 0.787743, 0.809131]             
+| CI_ESRX   | 0.7401055408970977       | [0.720539, 0.642336, 0.77533 , 0.767372]   
+| ANTM_CI   | 0.833383640205252      | [0.737534, 0.765203, 0.711755, 0.943925]             
+| AET_HUM   | 0.8003376952300548       | [0.750296, 0.714065, 0.750469, 0.889722]           
+| DIS_FOXA  | 0.8701227331013006      | [0.873879, 0.659794, 0.758621, 0.892416]  
 
 ### SiamNet (❌ haven't tried yet)
 
