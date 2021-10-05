@@ -75,7 +75,9 @@ test.to_csv('data/test_data.csv', index = False)
 | DIS_FOXA  | Disney      | 21st Century Fox  | Entertainment
 
 <br>
+
 ### more to be done：
+
 I will add more statistics about the dataset and see what financial features could be added. 
 
 ## Addtional datasets:
