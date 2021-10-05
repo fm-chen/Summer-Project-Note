@@ -76,6 +76,12 @@ test.to_csv('data/test_data.csv', index = False)
 
 <br>
 
+### statistics:
+![GitHub Logo](https://dl.dropbox.com/s/wfl9ts0xkc7olwu/Capture1.PNG){:height="30%" width="30%"}
+
+### paper results
+![GitHub Logo](https://dl.dropbox.com/s/8w1s6vn3mifgvy7/Capture2.PNG){:height="30%" width="30%"}
+
 ### more to be done：
 
 I will add more statistics about the dataset and see what financial features could be added. 
