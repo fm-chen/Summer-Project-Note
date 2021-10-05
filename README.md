@@ -78,7 +78,7 @@ Paper Link: https://arxiv.org/abs/2005.00388 <br>
     ✅ Note: Not avaiable yet but I already sent the email to request the data and hopefully, they will get back to me soon.
     
 
-## Useful Methodologies:
+## Useful/Baseline Methodologies:
 
 Overall, three major component for stance detection problems: Language Model, Classifier, and Evaluation
 ### Language model (❌ haven't tried yet)
@@ -101,3 +101,7 @@ The classification task is done in a 3-stage process:
 Method Offical Link: https://humboldt-wi.github.io/blog/research/information_systems_1819/group4_ulmfit/
 
 My Colab workpage: https://drive.google.com/file/d/1_UtMB7Nyv8zxYO9zPwxyQ__8Ok0iPDpD/view?usp=sharing
+
+
+### SiamNet (❌ haven't tried yet)
+
