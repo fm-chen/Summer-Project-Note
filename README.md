@@ -1,3 +1,8 @@
+### ✅ ACL paper: tWT–WT: ADataset to Assert the Role of Target Entities for Detecting Stance of Tweets
+
+link: https://www.aclweb.org/anthology/2021.naacl-main.303.pdf
+
+
 # Social Media Stance Detection under Fiancial Content
 ## Motivation
 Since the difficulty of true labeling, <b>stance detection</b>, as one of the crucial sub-task of fake content detecion, has been receving more and more attention.
