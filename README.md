@@ -1,4 +1,4 @@
-### ✅ ACL paper: tWT–WT: ADataset to Assert the Role of Target Entities for Detecting Stance of Tweets
+### ✅ ACL proceeding: tWT–WT: ADataset to Assert the Role of Target Entities for Detecting Stance of Tweets
 
 link: https://www.aclweb.org/anthology/2021.naacl-main.303.pdf
 
