@@ -1,14 +1,61 @@
-### ✅ ACL proceeding: tWT–WT: ADataset to Assert the Role of Target Entities for Detecting Stance of Tweets
-
-link: https://www.aclweb.org/anthology/2021.naacl-main.303.pdf
-
-
 # Social Media Stance Detection under Fiancial Content
 ## Motivation
 Since the difficulty of true labeling, <b>stance detection</b>, as one of the crucial sub-task of fake content detecion, has been receving more and more attention.
 
 ![GitHub Logo](https://dl.dropbox.com/s/xbguwgwyrv74cka/stat.jpg)
 <p>Publications per year on stance detection as searched on Web of Science. The following keywords were used for search: “stance detection”, “stance prediction” and “stance classification"</p>
+
+## Dataset (STANDAR)
+STANDER ts a large dataset of news articles in English from high-reputation sources which discuss four recent mergers and acquisitions (M&A) operations between major healthcare companies in the US. The news articles are annotated by experts and labeled for stance detection and fine-grained evidence retrieval.
+
+Paper Link: https://aclanthology.org/2020.findings-emnlp.365/
+### Stances:
+
+Four Categories: 🙂 Support ☹️ Refute 😑 Comment and 😕 Unrelated
+
+Example 💬
+```
+Stance: support
+Target: AET_HUM
+Title: Aetna to Acquire Humana for $37 Billion
+Body: Aetna (NYSE: AET) and Humana Inc. (NYSE: HUM) today announced that they have entered into a definitive agreement under swhich Aetna will acquiure all outstanding shares of Humana for a combination of cash and stock [...]
+```
+
+### Mergers:
+| Operation | Buyer       | Target            | Industry    | Outcome
+| ---       | ---         | ---               | ---         | ---
+| CVS_AET   | CVS Health  | Aetna             | Healthcare  | 💚 succeeded 
+| CI_ESRX   | Cigna       | Express Scripts   | Healthcare  | 💚 succeeded 
+| ANTM_CI   | Anthem      | Cigna             | Healthcare  | 💔 rejected 
+| AET_HUM   | Aetna       | Humana            | Healthcare  | 💔 rejected 
+
+### EDA:
+Article Count by Merger    |  Article Count by Merger and Stance 
+:-------------------------:|:-------------------------:
+![pic1](/src/pic1.png)  |  ![pic2](/src/pic2.png) 
+```
+The maximun number of token for BERT is 512, but some articles are longer.
+Text was truncated by 512 because 👇 the distribution of evidence location
+```
+<img src="/src/Capture1.PNG" width="50%" height="30%">
+
+### BERT-base-cased + CNN Result:
+|Merger_Type          |Accuracy|F1-Avg|F1-Weighted|comment_f1-score|comment_precision|comment_recall|refute_f1-score|refute_precision|refute_recall|support_f1-score|support_precision|support_recall|unrelated_f1-score|unrelated_precision|unrelated_recall|
+|--------------|--------|------|-----------|----------------|-----------------|--------------|---------------|----------------|-------------|----------------|-----------------|--------------|------------------|-------------------|----------------|
+|ANTM_CI_TARGET|0.315   |0.120 |0.151      |0.000           |0.000            |0.000         |0.000          |0.000           |0.000        |0.479           |0.315            |1.000         |0.000             |0.000              |0.000           |
+|ANTM_CI_NOT   |0.581   |0.320 |0.505      |0.000           |0.000            |0.000         |0.695          |0.588           |0.849        |0.587           |0.569            |0.605         |0.000             |0.000              |0.000           |
+|AET_HUM_TARGET|0.473   |0.161 |0.304      |0.000           |0.000            |0.000         |0.000          |0.000           |0.000        |0.643           |0.473            |1.000         |0.000             |0.000              |0.000           |
+|AET_HUM_NOT   |0.548   |0.473 |0.568      |0.399           |0.295            |0.619         |0.659          |0.670           |0.649        |0.583           |0.814            |0.454         |0.250             |0.333              |0.200           |
+|CI_ESRX_TARGET|0.616   |0.439 |0.630      |0.516           |0.408            |0.700         |0.521          |0.463           |0.594        |0.718           |0.875            |0.609         |0.000             |0.000              |0.000           |
+|CI_ESRX_NOT   |0.517   |0.382 |0.529      |0.477           |0.337            |0.814         |0.475          |0.440           |0.516        |0.576           |0.873            |0.430         |0.000             |0.000              |0.000           |
+|CVS_AET_TARGET|0.432   |0.319 |0.432      |0.310           |0.446            |0.238         |0.387          |0.245           |0.923        |0.577           |0.714            |0.484         |0.000             |0.000              |0.000           |
+|CVS_AET_NOT   |0.547   |0.408 |0.542      |0.548           |0.507            |0.595         |0.486          |0.383           |0.663        |0.599           |0.703            |0.522         |0.000             |0.000              |0.000           |
+
+
+### Biases in the Dataset
+1. the result shown above indicates that the CNN model puts less weights on "Target", which is not explanatory. 
+2. Unbalanced stance distribution. Thus, predictions on Unrelated/Comment are less accurate.
+
 
 ## Related Work and Publications (More previous articles to be added)
 1. Stance Detection on Social Media: State of the Art and Trends (2021): https://arxiv.org/pdf/2006.03644
@@ -23,88 +70,21 @@ Since the difficulty of true labeling, <b>stance detection</b>, as one of the cr
 10. Universal Language Model Fine-tuning for Text Classification (2018): https://arxiv.org/abs/1801.06146
 11. Stance Classification of Context-Dependent Claims (2017): https://aclanthology.org/E17-1024/
 12. MITREatSemEval-2016 Task 6: Transfer Learning for Stance Detection (2016): https://arxiv.org/abs/1606.03784
+### ✅ ACL proceeding: tWT–WT: ADataset to Assert the Role of Target Entities for Detecting Stance of Tweets
 
-## Data Set
-✅ Repository for the ACL 2020 paper:
-Will-They-Won't-They: A Very Large Dataset for Stance Detection on Twitter <br>
+link: https://www.aclweb.org/anthology/2021.naacl-main.303.pdf
 
-Will-They-Won't-They (WT-WT) is a large dataset of English tweets targeted at stance detection for the rumor verification task. The dataset is constructed based on tweets that discuss five recent merger and acquisition (M&A) operations of US companies, mainly from the healthcare sector.
-
-All the annotations are carried out by domain experts; therefore, the dataset constitutes a high-quality and reliable benchmark for future research in stance detection.
-
-Paper Link: https://arxiv.org/abs/2005.00388 <br>
-
-### Test Train Split (with stratifycation):
-
-```
-from sklearn.model_selection import train_test_split
-import pandas as pd
-
-data_org = pd.read_csv('data/full_data.csv')
-train, test = train_test_split(data_org, test_size=0.3, stratify=data_org['merger'])
-train.to_csv('data/train_data.csv', index = False)
-test.to_csv('data/test_data.csv', index = False)
-```
-
-### Stances:
-
-1. Support: the tweet is stating that the two companies will merge.
-```
-[CI_ESRX] Cigna to acquire Express Scripts for $52B in health care shakeup via usatoday
-```
-
-2. Refute: the tweet is voicing doubts that the two companies will merge.
-```
-[AET_HUM] Federal judge rejects Aetna’s bid to buy Louisville-based Humana for $34 billion
-```
-
-3. Comment: the tweet is commenting on merger, neither directly supporting, nor refuting it.
-```
-[CI_ESRX] Cigna-Express Scripts deal unlikely to benefit consumers
-```
-
-4. Unrelated: the tweet is unrelated to merger.
-```
-[CVS_AET] Aetna Announces Accountable Care Agreement with Weill Cornell Physicians
-```
-
-### Considered M&A operations
-
-
-| Operation | Buyer       | Target            | Industry
-| ---       | ---         | ---               | ---
-| CVS_AET   | CVS Health  | Aetna             | Healthcare
-| CI_ESRX   | Cigna       | Express Scripts   | Healthcare
-| ANTM_CI   | Anthem      | Cigna             | Healthcare
-| AET_HUM   | Aetna       | Humana            | Healthcare
-| DIS_FOXA  | Disney      | 21st Century Fox  | Entertainment
-
-<br>
-
-### statistics:
-<img src="https://dl.dropbox.com/s/wfl9ts0xkc7olwu/Capture1.PNG" width="80%" height="80%">
-
-### paper results
-<img src="https://dl.dropbox.com/s/8w1s6vn3mifgvy7/Capture2.PNG" width="80%" height="80%">
-
-### more to be done：
-
-I will add more statistics about the dataset and see what financial features could be added. 
 
 ## Addtional datasets:
-1. <b>Self GoogleNews collection of 319 articles. (under review)</b>
-2. <b>STANDER:</b>
+### Will-They-Won't-They: A Very Large Dataset for Stance Detection on Twitter
+Will-They-Won't-They (WT-WT) is a large dataset of English tweets targeted at stance detection for the rumor verification task. The dataset is constructed based on tweets that discuss five recent merger and acquisition (M&A) operations of US companies, mainly from the healthcare sector.
 
-    STANDER is a large dataset of news articles in English from high-reputation sources which discuss four recent mergers and acquisitions (M&A) operations between major healthcare companies in the US. The news articles are annotated by experts and labeled for stance detection and fine-grained evidence retrieval.
+Paper Link: https://arxiv.org/abs/2005.00388 
     
-    STANDER contains ✅ <b> the same targets as in the Twitter stance detection WT–WT corpus WT–WT corpus </b> (Conforti et al., 2020). The union of both corpora thus provides a great opportunity for studying the interplay between authoritative and user-generated signals.
-    
-    Paper Link: https://aclanthology.org/2020.findings-emnlp.365/
-    
-    GitHub Link: https://github.com/cambridge-wtwt/emnlp2020-stander-news
-    
-    ✅ Note: Not avaiable yet but I already sent the email to request the data and hopefully, they will get back to me soon.
-    
+
+
+---
+# Below works are done for Tweets dataset
 
 ## Useful/Baseline Methodologies:
 
@@ -148,5 +128,5 @@ My Colab workpage (with comments): https://drive.google.com/file/d/1_UtMB7Nyv8zx
 | AET_HUM   | 0.8003376952300548       | [0.750296, 0.714065, 0.750469, 0.889722]           
 | DIS_FOXA  | 0.8701227331013006      | [0.873879, 0.659794, 0.758621, 0.892416]  
 
-### SiamNet (❌ haven't tried yet)
+### SiamNet (⭕)
 
