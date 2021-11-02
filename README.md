@@ -38,9 +38,11 @@ Article Count by Merger and Stance    |  Article Count by Merger
 :-------------------------:|:-------------------------:
 ![pic1](/src/pic2.png)  |  ![pic2](/src/pic4.png) 
 
+#### Click Here For 👉👉👉👉👉 [Word Level Charts](/src/pic6.png)
+
 ```
 The maximun number of token for BERT is 512, but some articles are longer.
-Text was truncated by 512 because 👇 the distribution of evidence location
+Text was truncated by 512 because 👇 the distribution of evidence location. (the first chart shows the overall)
 ```
 <p align="center">
 <img src="/src/pic7.png" width="50%" height="30%">
