@@ -30,14 +30,31 @@ Body: Aetna (NYSE: AET) and Humana Inc. (NYSE: HUM) today announced that they ha
 | AET_HUM   | Aetna       | Humana            | Healthcare  | 💔 rejected 
 
 ### EDA:
-Article Count by Merger    |  Article Count by Merger and Stance 
+Article Count by Stance    |  Average Article Len by Merger and Stance 
 :-------------------------:|:-------------------------:
-![pic1](/src/pic1.png)  |  ![pic2](/src/pic2.png) 
+![pic1](/src/pic1.png)  |  ![pic2](/src/pic3.png) 
+
+Article Count by Merger and Stance    |  Article Count by Merger 
+:-------------------------:|:-------------------------:
+![pic1](/src/pic2.png)  |  ![pic2](/src/pic4.png) 
+
 ```
 The maximun number of token for BERT is 512, but some articles are longer.
 Text was truncated by 512 because 👇 the distribution of evidence location
 ```
-<img src="/src/Capture1.PNG" width="50%" height="30%">
+<p align="center">
+<img src="/src/pic7.png" width="50%" height="30%">
+</p>
+
+<p float="center">
+  <img src="/src/pic8.png" width="48%" height="30%">
+  <img src="/src/pic_8.png" width="48%" height="30%">
+</p>
+
+<p float="center">
+  <img src="/src/pic9.png" width="48%" height="30%">
+  <img src="/src/pic10.png" width="48%" height="30%">
+</p>
 
 ### BERT-base-cased + CNN Result:
 |Name      |Accuracy|F1-Avg|F1-Weighted|comment_f1-score|refute_f1-score|support_f1-score|
