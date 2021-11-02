@@ -38,7 +38,10 @@ Article Count by Merger and Stance    |  Article Count by Merger
 :-------------------------:|:-------------------------:
 ![pic1](/src/pic2.png)  |  ![pic2](/src/pic4.png) 
 
-#### Click Here For 👉👉👉👉👉 [Word Level Charts](/src/pic6.png)
+#### Click Here For 👉👉👉👉👉 [Word Level EDA by Stance](/src/pic6.png)
+#### Click Here For 👉👉👉👉👉 [Word Level EDA by Merger and Stance](/src/pic11.png)
+#### Click Here For 👉👉👉👉👉 [Top 100 Commom Words Across Stance](/src/pic12.png)
+#### Click Here For 👉👉👉👉👉 [Words Cloud by Stance](/src/pic13.png)
 
 ```
 The maximun number of token for BERT is 512, but some articles are longer.
